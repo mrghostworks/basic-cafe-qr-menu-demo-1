@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5ef">
+  <title>Café Menu | MRGhost Works</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: #f8f5ef;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-container {
+      width: 100%;
+      max-width: 900px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .error-message {
+      display: none;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    footer {
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="menu-container">
+    <img
+      class="menu-image"
+      src="basic-menu.jpg"
+      alt="Café menu"
+      onerror="this.style.display='none';document.getElementById('error').style.display='block';"
+    >
+
+    <div class="error-message" id="error">
+      <h2>Menu temporarily unavailable</h2>
+      <p>Please check the image filename or try again later.</p>
+    </div>
+
+    <footer>
+      Digital Menu Demo · MRGhost Works
+    </footer>
+  </main>
+</body>
+</html>
